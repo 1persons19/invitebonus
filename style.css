@@ -410,6 +410,14 @@ body {
   border-radius: 50%;
   border: 2px solid var(--surface);
 }
+/* PNG logo variant — image fills the icon box */
+.app-icon--img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 13px;
+  display: block;
+}
 .app-name { font-weight: 800; color: var(--ink); font-size: 1rem; margin-bottom: 0.2rem; }
 .app-category { font-size: 0.75rem; color: var(--muted); font-weight: 600; }
 .app-meta { flex: 1; }
