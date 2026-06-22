@@ -131,6 +131,7 @@
         <div>
           <div class="section-label">All Referral Codes</div>
           <h2 class="section-title">Available Offers</h2>
+          <h4 class="cards-grid">We are not affiliated with any listed companies.</h4>
         </div>
         <div class="filter-bar">
           <button class="filter-btn active" data-filter="all">All</button>
@@ -144,11 +145,60 @@
       <!-- CARDS GRID -->
       <div class="cards-grid" id="cardsGrid">
 
+        <!--
+        ============================================================
+        NEW CARD TEMPLATE — copy the div block below for each new app
+        ============================================================
+
+        <div class="offer-card" data-category="CATEGORY">
+          CATEGORY options: finance | investing | shopping | crypto
+
+          <div class="card-top">
+            <div class="app-icon app-icon--img" style="background: linear-gradient(135deg, #STARTCOLOR, #ENDCOLOR);">
+              <img src="https://logo.clearbit.com/APPWEBSITE.com" alt="APP NAME logo" />
+            </div>
+            <div class="app-meta">
+              <h3 class="app-name">APP NAME</h3>
+              <span class="app-category">CATEGORY LABEL</span>
+            </div>
+            <div class="card-badge badge-hot">Hot</div>
+            Badge options: badge-hot | badge-new  (delete this div if no badge needed)
+          </div>
+          <p class="app-desc">SHORT DESCRIPTION OF THE APP AND WHAT THE USER GETS.</p>
+          <div class="bonus-bar">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Welcome Bonus: <strong>BONUS DESCRIPTION</strong>
+          </div>
+          <div class="code-row">
+            <div class="code-box">
+              <span class="code-label">Code</span>
+              <span class="code-value" id="code-N">REFERRALCODE</span>
+            </div>
+            <button class="copy-btn" onclick="copyCode('code-N', this)">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy
+            </button>
+          </div>
+          <a href="SIGNUP_URL" class="redeem-btn" target="_blank" rel="noopener noreferrer">
+            Redeem Now
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+
+        CHECKLIST when adding a new card:
+        1. Set data-category to: finance | investing | shopping | crypto
+        2. Replace APPWEBSITE.com with the app's real domain (for the auto logo)
+        3. Change id="code-N" AND copyCode('code-N', ...) to the next number, e.g. code-7
+        4. Fill in APP NAME, BONUS DESCRIPTION, REFERRALCODE, and SIGNUP_URL
+        5. Update the hero "Active Offers" data-count number in the <header> section
+        ============================================================
+        -->
+
         <!-- CARD 1 -->
         <div class="offer-card" data-category="finance">
           <div class="card-top">
-            <div class="app-icon" style="background: linear-gradient(135deg, #00d632, #00a826);">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+            <div class="app-icon app-icon--img" style="background: linear-gradient(135deg, #00d632, #00a826);">
+              <img src="cashapplogo.png" alt="CashApp logo" onerror="this.style.display='none';this.parentElement.innerHTML+='<svg width=\'26\' height=\'26\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'white\' stroke-width=\'2.2\'><rect x=\'2\' y=\'5\' width=\'20\' height=\'14\' rx=\'2\'/><path d=\'M2 10h20\'/></svg>';" />
             </div>
             <div class="app-meta">
               <h3 class="app-name">CashApp</h3>
@@ -180,8 +230,8 @@
         <!-- CARD 2 -->
         <div class="offer-card" data-category="finance">
           <div class="card-top">
-            <div class="app-icon" style="background: linear-gradient(135deg, #0f2f7e, #3b6fd4);">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            <div class="app-icon app-icon--img" style="background: linear-gradient(135deg, #0f2f7e, #3b6fd4);">
+              <img src="revolutlogo.png" alt="Revolut logo" onerror="this.style.display='none';this.parentElement.innerHTML+='<svg width=\'26\' height=\'26\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'white\' stroke-width=\'2.2\'><circle cx=\'12\' cy=\'12\' r=\'10\'/><path d=\'M12 8v4l3 3\'/></svg>';" />
             </div>
             <div class="app-meta">
               <h3 class="app-name">Revolut</h3>
@@ -213,8 +263,8 @@
         <!-- CARD 3 -->
         <div class="offer-card" data-category="investing">
           <div class="card-top">
-            <div class="app-icon" style="background: linear-gradient(135deg, #00c805, #007a05);">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            <div class="app-icon app-icon--img" style="background: linear-gradient(135deg, #00c805, #007a05);">
+              <img src="robinhoodlogo.png" alt="Robinhood logo" onerror="this.style.display='none';this.parentElement.innerHTML+='<svg width=\'26\' height=\'26\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'white\' stroke-width=\'2.2\'><polyline points=\'22 7 13.5 15.5 8.5 10.5 2 17\'/><polyline points=\'16 7 22 7 22 13\'/></svg>';" />
             </div>
             <div class="app-meta">
               <h3 class="app-name">Robinhood</h3>
@@ -245,8 +295,8 @@
         <!-- CARD 4 -->
         <div class="offer-card" data-category="crypto">
           <div class="card-top">
-            <div class="app-icon" style="background: linear-gradient(135deg, #1652f0, #0d3cbf);">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9.5 9.5c.5-1 1.5-1.5 2.5-1.5 1.7 0 3 1.3 3 3 0 2.7-3 4-3 6"/><circle cx="12" cy="19" r=".5" fill="white"/></svg>
+            <div class="app-icon app-icon--img" style="background: linear-gradient(135deg, #1652f0, #0d3cbf);">
+              <img src="coinbaselogo.png" alt="Coinbase logo" onerror="this.style.display='none';this.parentElement.innerHTML+='<svg width=\'26\' height=\'26\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'white\' stroke-width=\'2.2\'><circle cx=\'12\' cy=\'12\' r=\'10\'/><path d=\'M9.5 9.5c.5-1 1.5-1.5 2.5-1.5 1.7 0 3 1.3 3 3 0 2.7-3 4-3 6\'/><circle cx=\'12\' cy=\'19\' r=\'.5\' fill=\'white\'/></svg>';" />
             </div>
             <div class="app-meta">
               <h3 class="app-name">Coinbase</h3>
@@ -278,8 +328,8 @@
         <!-- CARD 5 -->
         <div class="offer-card" data-category="shopping">
           <div class="card-top">
-            <div class="app-icon" style="background: linear-gradient(135deg, #ff6900, #e05000);">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <div class="app-icon app-icon--img" style="background: linear-gradient(135deg, #ff6900, #e05000);">
+              <img src="rakutenlogo.png" alt="Rakuten logo" onerror="this.style.display='none';this.parentElement.innerHTML+='<svg width=\'26\' height=\'26\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'white\' stroke-width=\'2.2\'><path d=\'M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z\'/><line x1=\'3\' y1=\'6\' x2=\'21\' y2=\'6\'/><path d=\'M16 10a4 4 0 0 1-8 0\'/></svg>';" />
             </div>
             <div class="app-meta">
               <h3 class="app-name">Rakuten</h3>
@@ -311,8 +361,8 @@
         <!-- CARD 6 -->
         <div class="offer-card" data-category="investing">
           <div class="card-top">
-            <div class="app-icon" style="background: linear-gradient(135deg, #5eba47, #3a8f28);">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div class="app-icon app-icon--img" style="background: linear-gradient(135deg, #5eba47, #3a8f28);">
+              <img src="acornslogo.png" alt="Acorns logo" onerror="this.style.display='none';this.parentElement.innerHTML+='<svg width=\'26\' height=\'26\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'white\' stroke-width=\'2.2\'><path d=\'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\'/></svg>';" />
             </div>
             <div class="app-meta">
               <h3 class="app-name">Acorns</h3>
