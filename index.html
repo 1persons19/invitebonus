@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Invite Bonus - Exclusive Referral Rewards</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232563EB'/%3E%3Cstop offset='1' stop-color='%237C3AED'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='24' height='24' rx='6' fill='url(%23g)'/%3E%3Cpath d='M12 3.5l5.5 2.2v4c0 3.8-2.3 6.6-5.5 7.8-3.2-1.2-5.5-4-5.5-7.8v-4z' fill='none' stroke='white' stroke-width='1.6' stroke-linejoin='round'/%3E%3Cpath d='M9.3 12l1.8 1.8 3.4-3.6' fill='none' stroke='white' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/png" href="logo.png" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,10 +17,7 @@
     <div class="nav-inner">
       <div class="logo">
         <span class="logo-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2.5l7.5 3v5.5c0 5-3.2 8.9-7.5 10.5-4.3-1.6-7.5-5.5-7.5-10.5V5.5l7.5-3z"/>
-            <path d="M8.5 12.2l2.4 2.4 4.6-4.8"/>
-          </svg>
+          <img src="logo.png" alt="InviteBonus logo" />
         </span>
         <span class="logo-text">Invite<span class="logo-accent">Bonus</span></span>
       </div>
@@ -28,6 +25,7 @@
         <a href="#offers">All Offers</a>
         <a href="#how">How It Works</a>
         <a href="#faq">FAQ</a>
+        <a href="#support">Support</a>
       </div>
       <div class="nav-badge">
         <span class="pulse-dot"></span>
@@ -413,15 +411,45 @@
     </div>
   </section>
 
+  <!-- SUPPORT -->
+  <section class="support-section" id="support">
+    <div class="section-inner section-inner--narrow">
+      <div class="section-label">Need a Hand?</div>
+      <h2 class="section-title">Contact &amp; Support</h2>
+      <p class="support-intro">Have a question, found a broken code, or want to suggest an app? Send us a message and we'll get back to you.</p>
+      <form class="support-form" action="https://formspree.io/f/xjgqbnap" method="POST">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="sup-name">Name</label>
+            <input type="text" id="sup-name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-field">
+            <label for="sup-email">Email</label>
+            <input type="email" id="sup-email" name="email" placeholder="you@example.com" required />
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="sup-subject">Subject</label>
+          <input type="text" id="sup-subject" name="subject" placeholder="What's this about?" />
+        </div>
+        <div class="form-field">
+          <label for="sup-message">Message</label>
+          <textarea id="sup-message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+        </div>
+        <button type="submit" class="support-submit">
+          Send Message
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="logo">
         <span class="logo-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2.5l7.5 3v5.5c0 5-3.2 8.9-7.5 10.5-4.3-1.6-7.5-5.5-7.5-10.5V5.5l7.5-3z"/>
-            <path d="M8.5 12.2l2.4 2.4 4.6-4.8"/>
-          </svg>
+          <img src="logo.png" alt="InviteBonus logo" />
         </span>
         <span class="logo-text">Invite<span class="logo-accent">Bonus</span></span>
       </div>
