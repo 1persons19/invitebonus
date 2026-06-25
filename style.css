@@ -49,7 +49,7 @@ body {
 /* ---- SCROLLBAR ---- */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--blue-lt); border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 4px; }
 
 /* ---- SELECTION ---- */
 ::selection { background: var(--violet-lt); color: var(--ink); }
@@ -360,6 +360,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.4rem;
+  align-items: start;
 }
 .offer-card {
   background: var(--surface);
@@ -472,6 +473,31 @@ body {
 }
 .copy-btn:hover { background: rgba(37,99,235,0.16); }
 .copy-btn.copied { background: rgba(34,197,94,0.15); border-color: rgba(34,197,94,0.3); color: #15803D; }
+
+/* ---- Link row (for apps that use referral links, not codes) ---- */
+.link-row {
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.link-box {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  background: var(--bg);
+  border: 1px dashed var(--border);
+  border-radius: 9px;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.link-label {
+  font-size: 0.7rem; color: var(--muted); font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+.link-value {
+  font-size: 0.82rem; font-weight: 600; color: var(--ink-soft);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.link-icon {
+  flex-shrink: 0; color: var(--blue-lt);
+}
 
 .redeem-btn {
   display: flex; align-items: center; justify-content: center; gap: 0.5rem;
