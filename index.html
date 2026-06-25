@@ -106,8 +106,8 @@
         <div class="step">
           <div class="step-num">02</div>
           <div class="step-body">
-            <h3>Copy the Code</h3>
-            <p>Click the copy button to grab the referral code or use the direct link.</p>
+            <h3>Copy the Code or Open the Link</h3>
+            <p>Some apps use a referral code — copy it and paste it at signup. Others use a personal invite link — just click "Redeem Now" to open it directly.</p>
           </div>
         </div>
         <div class="step-arrow">
@@ -131,7 +131,6 @@
         <div>
           <div class="section-label">All Referral Codes</div>
           <h2 class="section-title">Available Offers</h2>
-          <h4 class="cards-grid">We are not affiliated with any listed companies.</h4>
         </div>
         <div class="filter-bar">
           <button class="filter-btn active" data-filter="all">All</button>
@@ -169,6 +168,7 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             Welcome Bonus: <strong>BONUS DESCRIPTION</strong>
           </div>
+          ── OPTION A: App uses a REFERRAL CODE (user copies & pastes it at signup) ──
           <div class="code-row">
             <div class="code-box">
               <span class="code-label">Code</span>
@@ -179,6 +179,17 @@
               Copy
             </button>
           </div>
+
+          ── OPTION B: App uses a REFERRAL LINK (clicking the button signs them up) ──
+          <div class="link-row">
+            <div class="link-box">
+              <svg class="link-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+              <span class="link-label">Invite Link</span>
+              <span class="link-value">appname.com/referral</span>
+            </div>
+          </div>
+
+          ── Use ONE of the above options, then always include the Redeem button below ──
           <a href="SIGNUP_URL" class="redeem-btn" target="_blank" rel="noopener noreferrer">
             Redeem Now
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
@@ -188,9 +199,10 @@
         CHECKLIST when adding a new card:
         1. Set data-category to: finance | investing | shopping | crypto
         2. Replace APPWEBSITE.com with the app's real domain (for the auto logo)
-        3. Change id="code-N" AND copyCode('code-N', ...) to the next number, e.g. code-7
-        4. Fill in APP NAME, BONUS DESCRIPTION, REFERRALCODE, and SIGNUP_URL
-        5. Update the hero "Active Offers" data-count number in the <header> section
+        3. CODE cards: update id="code-N" and copyCode('code-N',...) to the next number (e.g. code-7)
+        4. LINK cards: update link-value display text and the href on the redeem-btn
+        5. Fill in APP NAME, BONUS DESCRIPTION, and SIGNUP_URL
+        6. Update the hero "Active Offers" data-count number in the <header> section
         ============================================================
         -->
 
@@ -209,52 +221,32 @@
           <p class="app-desc">Send and receive money instantly. Use the code at signup to get a cash bonus credited to your account.</p>
           <div class="bonus-bar">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            Welcome Bonus: <strong>$10 Cash</strong>
+            Welcome Bonus: <strong>$5 Cash</strong>
           </div>
-          <div class="code-row">
-            <div class="code-box">
-              <span class="code-label">Code</span>
-              <span class="code-value" id="code-1">YOURCODE1</span>
-            </div>
-            <button class="copy-btn" onclick="copyCode('code-1', this)">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Copy
-            </button>
-          </div>
-          <a href="https://cash.app/login" class="redeem-btn" target="_blank" rel="noopener noreferrer">
+          <a href="https://cash.app/app/D2CPKW4" class="redeem-btn" target="_blank" rel="noopener noreferrer">
             Redeem Now
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </a>
         </div>
 
         <!-- CARD 2 -->
-        <div class="offer-card" data-category="finance">
+        <div class="offer-card" data-category="shopping">
           <div class="card-top">
             <div class="app-icon app-icon--img" style="background: linear-gradient(135deg, #0f2f7e, #3b6fd4);">
-              <img src="revolutlogo.png" alt="Revolut logo" onerror="this.style.display='none';this.parentElement.innerHTML+='<svg width=\'26\' height=\'26\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'white\' stroke-width=\'2.2\'><circle cx=\'12\' cy=\'12\' r=\'10\'/><path d=\'M12 8v4l3 3\'/></svg>';" />
+              <img src="fiverrlogo.png" alt="Revolut logo" onerror="this.style.display='none';this.parentElement.innerHTML+='<svg width=\'26\' height=\'26\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'white\' stroke-width=\'2.2\'><circle cx=\'12\' cy=\'12\' r=\'10\'/><path d=\'M12 8v4l3 3\'/></svg>';" />
             </div>
             <div class="app-meta">
-              <h3 class="app-name">Revolut</h3>
-              <span class="app-category">Finance</span>
+              <h3 class="app-name">Fiverr</h3>
+              <span class="app-category">Shopping</span>
             </div>
             <div class="card-badge badge-new">New</div>
           </div>
-          <p class="app-desc">The all-in-one financial super-app. Get a physical card and up to $25 bonus when you sign up and spend.</p>
+          <p class="app-desc">Hire talented freelancers for almost any project and unlock savings on your first purchase.</p>
           <div class="bonus-bar">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             Welcome Bonus: <strong>$25 Cash</strong>
           </div>
-          <div class="code-row">
-            <div class="code-box">
-              <span class="code-label">Code</span>
-              <span class="code-value" id="code-2">YOURCODE2</span>
-            </div>
-            <button class="copy-btn" onclick="copyCode('code-2', this)">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Copy
-            </button>
-          </div>
-          <a href="https://sso.revolut.com/signin?client_id=o3r08ao16zvdlf2y5fdc&redirect_uri=https%3A%2F%2Fapp.revolut.com%2Fhome%3Frwa_auth_type%3Dauth&response_type=code&code_challenge_method=S256&code_challenge=cxVU-7Dkz5cvpfnrHXiP3I4Mc4viVMRyyAIqwkBbUTI&response_mode=query&ui_locales=en-US&ui_color_scheme=dark&ui_background=blue&state=_pk_ffYbxE5vCJ23iH5z" class="redeem-btn" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.fiverr.com/pe/Gz7Yv1q" class="redeem-btn" target="_blank" rel="noopener noreferrer">
             Redeem Now
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </a>
@@ -276,17 +268,7 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             Welcome Bonus: <strong>1 Free Stock</strong>
           </div>
-          <div class="code-row">
-            <div class="code-box">
-              <span class="code-label">Code</span>
-              <span class="code-value" id="code-3">YOURCODE3</span>
-            </div>
-            <button class="copy-btn" onclick="copyCode('code-3', this)">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Copy
-            </button>
-          </div>
-          <a href="https://robinhood.com/login/" class="redeem-btn" target="_blank" rel="noopener noreferrer">
+          <a href="https://join.robinhood.com/josephh10502" class="redeem-btn" target="_blank" rel="noopener noreferrer">
             Redeem Now
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </a>
@@ -309,16 +291,6 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             Welcome Bonus: <strong>$10 Bitcoin</strong>
           </div>
-          <div class="code-row">
-            <div class="code-box">
-              <span class="code-label">Code</span>
-              <span class="code-value" id="code-4">YOURCODE4</span>
-            </div>
-            <button class="copy-btn" onclick="copyCode('code-4', this)">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Copy
-            </button>
-          </div>
           <a href="https://login.coinbase.com/signin?client_id=258660e1-9cfe-4202-9eda-d3beedb3e118&locale=en&oauth_challenge=76433531-3e9d-4c5b-a033-ef0b835440ac" class="redeem-btn" target="_blank" rel="noopener noreferrer">
             Redeem Now
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
@@ -329,30 +301,20 @@
         <div class="offer-card" data-category="shopping">
           <div class="card-top">
             <div class="app-icon app-icon--img" style="background: linear-gradient(135deg, #ff6900, #e05000);">
-              <img src="rakutenlogo.png" alt="Rakuten logo" onerror="this.style.display='none';this.parentElement.innerHTML+='<svg width=\'26\' height=\'26\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'white\' stroke-width=\'2.2\'><path d=\'M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z\'/><line x1=\'3\' y1=\'6\' x2=\'21\' y2=\'6\'/><path d=\'M16 10a4 4 0 0 1-8 0\'/></svg>';" />
+              <img src="ubereatslogo.png" alt="Uber Eats logo" onerror="this.style.display='none';this.parentElement.innerHTML+='<svg width=\'26\' height=\'26\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'white\' stroke-width=\'2.2\'><path d=\'M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z\'/><line x1=\'3\' y1=\'6\' x2=\'21\' y2=\'6\'/><path d=\'M16 10a4 4 0 0 1-8 0\'/></svg>';" />
             </div>
             <div class="app-meta">
-              <h3 class="app-name">Rakuten</h3>
+              <h3 class="app-name">Uber Eats</h3>
               <span class="app-category">Shopping</span>
             </div>
             <div class="card-badge badge-new">New</div>
           </div>
-          <p class="app-desc">Earn cashback on everyday online shopping. New members get a welcome bonus after their first qualifying purchase.</p>
+          <p class="app-desc">Get food delivered fast from local restaurants and enjoy exclusive discounts on your first order.</p>
           <div class="bonus-bar">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            Welcome Bonus: <strong>$30 Cash</strong>
+            Welcome Bonus: <strong>$20 Cash</strong>
           </div>
-          <div class="code-row">
-            <div class="code-box">
-              <span class="code-label">Code</span>
-              <span class="code-value" id="code-5">YOURCODE5</span>
-            </div>
-            <button class="copy-btn" onclick="copyCode('code-5', this)">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Copy
-            </button>
-          </div>
-          <a href="https://www.rakuten.com/?src=msn&eeid=17881&utm_channel=sem&utm_medium=sem&utm_source=268724110&utm_campaign=b&utm_content=c&utm_term=bng&utm_pub=1178677143283366&utm_size=kwd-73667403224216:loc-190&acct=b&ds_kids=230602554&dest_stack=act&gclid=e1b3158189df1b1f48ec7fb9ca31451a&gclsrc=3p.ds&msclkid=e1b3158189df1b1f48ec7fb9ca31451a" class="redeem-btn" target="_blank" rel="noopener noreferrer">
+          <a href="https://ubereats.com/feed?promoCode=eats-joeh45uui" class="redeem-btn" target="_blank" rel="noopener noreferrer">
             Redeem Now
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </a>
@@ -374,17 +336,29 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             Welcome Bonus: <strong>$5 Investment</strong>
           </div>
-          <div class="code-row">
-            <div class="code-box">
-              <span class="code-label">Code</span>
-              <span class="code-value" id="code-6">YOURCODE6</span>
+          <a href="https://acorns.com/share/?shareable_code=FT76NKS&first_name=Joseph&friend_reward=5" class="redeem-btn" target="_blank" rel="noopener noreferrer">
+            Redeem Now
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+
+        <!-- CARD 7 -->
+        <div class="offer-card" data-category="investing">
+          <div class="card-top">
+            <div class="app-icon app-icon--img" style="background: linear-gradient(135deg, #ffffff, #003b94);">
+              <img src="webulllogo.png" alt="Webull logo" onerror="this.style.display='none';this.parentElement.innerHTML+='<svg width=\'26\' height=\'26\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'white\' stroke-width=\'2.2\'><polyline points=\'22 7 13.5 15.5 8.5 10.5 2 17\'/><polyline points=\'16 7 22 7 22 13\'/></svg>';" />
             </div>
-            <button class="copy-btn" onclick="copyCode('code-6', this)">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Copy
-            </button>
+            <div class="app-meta">
+              <h3 class="app-name">Webull</h3>
+              <span class="app-category">Investing</span>
+            </div>
           </div>
-          <a href="https://oak.acorns.com/sign-in" class="redeem-btn" target="_blank" rel="noopener noreferrer">
+          <p class="app-desc">Commission-free stock trading. Sign up with a referral and receive a free stock slice worth up to $200.</p>
+          <div class="bonus-bar">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Welcome Bonus: <strong>1 Free Stock</strong>
+          </div>
+          <a href="https://robinhood.com/login/" class="redeem-btn" target="_blank" rel="noopener noreferrer">
             Redeem Now
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </a>
@@ -409,7 +383,7 @@
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
           <div>
             <h4>Completely Free</h4>
-            <p>No sign-up required. Just copy and go.</p>
+            <p>No fees, no catch, just pick an offer and claim the reward.</p>
           </div>
         </div>
         <div class="trust-item">
