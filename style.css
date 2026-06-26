@@ -377,10 +377,6 @@ body {
   height: 4px;
   background: var(--grad-brand);
 }
-.offer-card[data-category="finance"]::before   { background: linear-gradient(90deg, var(--blue), var(--blue-lt)); }
-.offer-card[data-category="investing"]::before { background: linear-gradient(90deg, var(--teal), var(--teal-lt)); }
-.offer-card[data-category="shopping"]::before  { background: linear-gradient(90deg, var(--coral), var(--amber)); }
-.offer-card[data-category="crypto"]::before    { background: linear-gradient(90deg, var(--violet), var(--violet-lt)); }
 .offer-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
